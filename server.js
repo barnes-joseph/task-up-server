@@ -7,7 +7,7 @@ const task_router = require('./routes/task_routes')
 const tasklist_router = require('./routes/tasklist_routes')
 
 const corsOption = {
-  origin: "https://barnes-joseph-task-up.netlify.app/",
+  origin: "https://barnes-joseph-task-up.netlify.app",
 };
 
 // middlewares
