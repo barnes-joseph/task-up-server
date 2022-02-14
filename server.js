@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const app = express()
@@ -6,8 +7,8 @@ const task_router = require('./routes/task_routes')
 const tasklist_router = require('./routes/tasklist_routes')
 
 const corsOption = {
-    origin:'http://localhost:3000'
-}
+  origin: "https://barnes-joseph-task-up.netlify.app/",
+};
 
 // middlewares
 app.use(express.json())
@@ -24,7 +25,7 @@ app.get('/',(req,res)=>{
 })
 
 // PORT
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 5000
 
 // server
 app.listen(PORT,()=>{
