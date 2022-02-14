@@ -47,7 +47,7 @@ const getTaskListById = async (req, res) => {
         .status(404)
         .json({ success: false, message: "Tasklist does not exist" });
     }
-    const tasks = await Tasks.findAll({ where: { tasklistID: task_list_id } });
+    const tasks = await Tasks.findAll({ where: { tasklistId: task_list_id } });
     return res
       .status(200)
       .json({ success: true, tasklist: { ...tasklist.dataValues, tasks: tasks } });
